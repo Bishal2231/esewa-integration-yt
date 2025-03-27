@@ -15,7 +15,7 @@ const transactionSchema=new mongoose.Schema({
         enum:["PENDING","COMPLETE","FAILED","REFUNDED"],// Example statuses
         default:"PENDING"
     }
-},{timestampstrue} //Adds createdAt and updatedAt fields automatically
+},{timestamps:true} //Adds createdAt and updatedAt fields automatically
 
 )
 export const Transaction=mongoose.model("Transaction",transactionSchema)
